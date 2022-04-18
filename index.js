@@ -8,6 +8,11 @@ app.listen(4000, () => {
     console.log('Server Works !!! At port 4000');
 });
 
+app.get('/', function(req,res){
+    res.json({
+        app: 'twitter video downloader'
+    })
+});
 
 app.get('/download', (req,res) => {
     var URL = req.query.URL;
